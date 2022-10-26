@@ -10,30 +10,23 @@ public class Calculations {
         float netpice = 0;
         float vat;
         int numOfItems;
-        while (true) {
-            try {
+
                 netpice = dataCollected.collNetPriceFromDialog();
+                if(netpice<=0){
+                    dataCollected.collNetPriceFromDialog();
+                }
                 System.out.println("Net price: " + netpice);
-            } catch (NumberFormatException ex) {
-                dataCollected.badInput();
-                break;
-            }
-            try {
+
+
                 vat = dataCollected.collectVAT();
                 System.out.println("VAT: " + vat);
-            } catch (NumberFormatException ex) {
-                dataCollected.badInput();
-                break;
-            }
-            try {
+
+
                 numOfItems = (int) dataCollected.collectNumOfItems();
                 System.out.println("Number of items " + numOfItems);
-                break;
-            }  catch(NumberFormatException ex) {
-                dataCollected.badInput();
-                break;
-            }
-        }
+
+
+
             return netpice;
     }
 }
