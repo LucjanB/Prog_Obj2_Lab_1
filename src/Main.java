@@ -4,6 +4,7 @@ public class Main {
     {
         Calculations calc = new Calculations();
         Visual vis = new Visual();
-        vis.showInputPane();
+        String mes = vis.showInputPane();
+        vis.showMessageDialog(mes);
     }
 }
