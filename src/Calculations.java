@@ -1,32 +1,33 @@
 public class Calculations {
     private float netPrice;
-    private float vat;
+    private float vat=0;
     private int numOfItems;
     private int counter;
     private float sumOfAllProducts;
     private final CollectData dataCollected = new CollectData();
 
-    float calcSingleProduct() {
-        float netpice = 0;
-        float vat;
+    void calcSingleProduct() {
+        float netpice;
+        float vat =0;
         int numOfItems;
-
-                netpice = dataCollected.collNetPriceFromDialog();
-                if(netpice<=0){
-                    dataCollected.collNetPriceFromDialog();
-                }
-                System.out.println("Net price: " + netpice);
-
-
-                vat = dataCollected.collectVAT();
-                System.out.println("VAT: " + vat);
-
-
-                numOfItems = (int) dataCollected.collectNumOfItems();
-                System.out.println("Number of items " + numOfItems);
+                do {
+                    netpice = dataCollected.collNetPriceFromDialog();
+                }while (netpice<=0);
 
 
 
-            return netpice;
+                do {
+                    vat = dataCollected.collectVAT();
+                } while (vat <= 0);
+                           // vat = dataCollected.collectVAT();
+
+                do {
+                    numOfItems = (int) dataCollected.collectNumOfItems();
+                } while (numOfItems <= 0);
+
+                    System.out.println("Net price: " + netpice);
+                    System.out.println("VAT: " + vat);
+                    System.out.println("Number of items " + numOfItems);
+
     }
 }

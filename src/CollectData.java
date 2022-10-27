@@ -7,26 +7,27 @@ public class CollectData {
         if(str.matches("-?(0|[1-9]\\d*)")) {// !!!!!!!!!!!!!!!!!!!!
             return Float.parseFloat(str);
         } else {
-            System.out.println("Wrong value");
+           visual.showMessageDialog("Wrong value !");
+            return 0 ;
         }
-        return 0;
+
     }
     float collectVAT(){
         String str =visual.showInputDialog("Insert VAT:");// !!!!!!!!!!!!!!!!!!!!
         if(str.matches("-?(0|[1-9]\\d*)")) {// !!!!!!!!!!!!!!!!!!!!
             return Float.parseFloat(str);
         } else {
-            System.out.println("Wrong value");
-            collectVAT();
+            visual.showMessageDialog("Wrong value !");
+            return 0;
         }
-        return 0;
+
     }
     float collectNumOfItems(){
         String str =visual.showInputDialog("Insert number of items :");// !!!!!!!!!!!!!!!!!!!!
         if(str.matches("-?(0|[1-9]\\d*)")) {// !!!!!!!!!!!!!!!!!!!!
             return Float.parseFloat(str);
         } else {
-            System.out.println("Wrong value");
+            visual.showMessageDialog("Wrong value !");
         }
         return 0;
     }
