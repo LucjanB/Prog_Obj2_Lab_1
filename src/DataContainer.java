@@ -1,6 +1,7 @@
-public record DataContainer(float netPrice, float vat, int numOfItems, float totalNet) {
+public record DataContainer(int prodCount,float netPrice, float vat, int numOfItems, float totalNet) {
 
-    public DataContainer(float netPrice, float vat, int numOfItems, float totalNet) {
+    public DataContainer(int prodCount,float netPrice, float vat, int numOfItems, float totalNet) {
+        this.prodCount = prodCount;
         this.netPrice = netPrice;
         this.vat = vat;
         this.numOfItems = numOfItems;
@@ -9,10 +10,11 @@ public record DataContainer(float netPrice, float vat, int numOfItems, float tot
 
     @Override
     public String toString() {
-        System.out.println("Net :"+ netPrice);
-        System.out.println("VAT :"+ vat);
-        System.out.println("Number :"+ numOfItems);
-        System.out.println("Total  :"+ totalNet);
+        System.out.println("Product No : "+ prodCount);
+        System.out.println("Net : "+ netPrice);
+        System.out.println("VAT : "+ vat);
+        System.out.println("Number : "+ numOfItems);
+        System.out.println("Total  : "+ totalNet);
         return "";
     }
 }
