@@ -8,7 +8,6 @@ public class Calculations {
     private float totalNet;
     private int prodCount=0;
     private final CollectData dataCollected = new CollectData();
-    private final Visual visual = new Visual();
     ArrayList<DataContainer> sigleProduct = new ArrayList<DataContainer>();
 
     void terminalPart(){
@@ -17,7 +16,6 @@ public class Calculations {
         calcSingleProduct();
     }
     void calcSingleProduct() {
-
                 do {
                     netPrice = dataCollected.collNetPriceFromDialog();
                 }while (netPrice<=0);
