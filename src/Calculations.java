@@ -10,6 +10,12 @@ public class Calculations {
     private final CollectData dataCollected = new CollectData();
     private final Visual visual = new Visual();
     ArrayList<DataContainer> sigleProduct = new ArrayList<DataContainer>();
+
+    void terminalPart(){
+        System.out.println("Program calculating value of a bill.");
+        System.out.println("====================================");
+        calcSingleProduct();
+    }
     void calcSingleProduct() {
 
                 do {
