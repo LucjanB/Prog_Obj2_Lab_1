@@ -2,7 +2,8 @@ import javax.swing.JOptionPane;
 public class CollectData {
     private final Visual visual = new Visual();
     float collNetPriceFromDialog(){
-        String str =visual.showInputDialog("Insert net price :");
+        String str =visual.showInputDialog("Insert net price :","Price");
+        if(str==null) System.exit(0);
         if(str.matches("[-+]?[0-9]*\\.?[0-9]+")) {// <-- RegEx to validate float
             return Float.parseFloat(str);
         } else {
@@ -11,7 +12,8 @@ public class CollectData {
         }
     }
     float collectVAT(){
-        String str =visual.showInputDialog("Insert VAT:");
+        String str =visual.showInputDialog("Insert VAT:","VAT");
+        if(str==null) System.exit(0);
         if(str.matches("[-+]?[0-9]*\\.?[0-9]+")) {// <-- RegEx to validate float
             return Float.parseFloat(str);
         } else {
@@ -20,7 +22,8 @@ public class CollectData {
         }
     }
     float collectNumOfItems(){
-        String str =visual.showInputDialog("Insert number of items :");
+        String str =visual.showInputDialog("Insert number of items :","Number of items");
+        if(str==null) System.exit(0);
         if(str.matches("-?(0|[1-9]\\d*)")) {// <-- RegEx to validate integer
             return Float.parseFloat(str);
         } else {

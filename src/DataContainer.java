@@ -5,8 +5,8 @@ public record DataContainer(int prodCount, float netPrice, float vat, float vatV
         System.out.println("Number of items : " + numOfItems);
         System.out.println("Net price of single product: "+ netPrice);
         System.out.println("VAT % : "+ vat +" %");
-        System.out.println("Total VAT value : " + vatVal);
         System.out.println("Total net price : " + totalNet);
+        System.out.println("Total VAT value : " + vatVal);
         return "";
     }
 }
