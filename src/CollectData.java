@@ -28,8 +28,5 @@ public class CollectData {
         }
         return 0;
     }
-    void terminalPart(){
-        System.out.println("Program calculating value of a bill.");
-        System.out.println("====================================");
-    }
+
 }
