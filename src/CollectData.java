@@ -31,6 +31,5 @@ public class CollectData {
     void terminalPart(){
         System.out.println("Program calculating value of a bill.");
         System.out.println("====================================");
-        //calcPrice.calcSingleProduct();
     }
 }

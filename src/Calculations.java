@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import javax.sound.midi.Soundbank;
 import javax.swing.JOptionPane;
 public class Calculations {
     private float netPrice;
-    private float vat=0;
+    private float vat;
     private float vatValue;
     private int numOfItems;
     private float totalNet;
@@ -41,7 +40,7 @@ public class Calculations {
                if(contDialog ==0){
                    calcSingleProduct();
                } else {
-                   for (DataContainer dataset: sigleProduct) { // Printing all purchases.
+                   for (DataContainer dataset: sigleProduct) { // Printing all purchases AND summing VAT and net amounts.
                        billNet+=dataset.totalNet();
                        billVAT+=dataset.vatVal();
                        dataset.toString();
@@ -50,7 +49,7 @@ public class Calculations {
                    System.out.println("Sum of all products:");
                    System.out.println("--------------------");
                    System.out.println("Net value of all products : " + billNet);
-                   System.out.println("VAT value of all products : "+ billVAT);
+                   System.out.println("VAT value of all products : " + billVAT);
                    System.out.println("========================================");
                    System.out.println("\n This is the end of the program.");
                }
