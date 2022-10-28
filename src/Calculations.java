@@ -29,6 +29,7 @@ public class Calculations {
                 do {
                     numOfItems = (int) dataCollected.collectNumOfItems();
                 } while (numOfItems <= 0);
+
                 prodCount++;
                 totalNet = netPrice*numOfItems;
                 vatValue = (vat/100)*totalNet;
