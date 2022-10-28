@@ -10,9 +10,11 @@ public class Visual {
     void showTerminateDialog(){
         JOptionPane.showMessageDialog(
                 null,
-                "Applicatiao was terminated.",
+                "Application was terminated.",
                 "Cancelled",
                 JOptionPane.ERROR_MESSAGE);
+        System.out.println("Application terminated.");
+        System.exit(0);
     }
     String showInputDialog(String info, String title) {
         return JOptionPane.showInputDialog(null,

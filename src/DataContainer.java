@@ -1,3 +1,4 @@
+
 public record DataContainer(int prodCount, float netPrice, float vat, float vatVal, int numOfItems, float totalNet) {
     @Override
     public String toString() {
